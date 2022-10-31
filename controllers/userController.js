@@ -91,18 +91,6 @@ const verificationLink = asyncHandler(async (req, res) => {
     'cargarage123',
     { expiresIn: '10m' }
   )
-  //send email to regitering user
-  // sgMail.setApiKey(process.env.SENDGRID_API_KEY)
-
-  // var transporter = nodemailer.createTransport({
-  //   service: 'gmail',
-  //   auth: {
-  //     user: process.env.USER1,
-  //     pass: process.env.PASSWORD,
-  //   },
-  // })
-  // console.log('USER IS', process.env.USER1)
-  // console.log(process.env.PASSWORD)
   const mailOptions = {
     from: sender,
     to: email,
@@ -111,15 +99,6 @@ const verificationLink = asyncHandler(async (req, res) => {
     html: `<p>Please click on the link below to activate your account</p>
     <a href="http://localhost:3000/verify/${tokengenerate}">http://localhost:3000/verify/${tokengenerate}</a>`,
   }
-  // var mailOptions = {
-  //   from: 'KinBechSaman.com',
-  //   to: email,
-  //   subject: 'Verify your account',
-
-  //   html: `<p>Please click on the link below to activate your account</p>
-  //   <a href="${process.env.EMAIL_URL}/verify/${tokengenerate}">${process.env.EMAIL_URL}/verify/${tokengenerate}</a>`,
-  // }
-
  var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {

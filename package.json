@@ -4,8 +4,11 @@
   "description": "",
   "main": "server.js",
   "type": "module",
+  "engines": {
+    "node": "17.x"
+  },
   "scripts": {
-    "start": "node backend/server",
+    "start": "node server",
     "server": "nodemon backend/server",
     "data:import": "node backend/seeder",
     "data:destroy": "node backend/seeder -d"

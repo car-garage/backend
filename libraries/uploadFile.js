@@ -4,9 +4,9 @@ dotenv.config();
 import fs from "fs";
 
 cloudinary.config({
-  cloud_name: process.env.CLOUD_NAME,
-  api_key: process.env.API_KEY,
-  api_secret: process.env.API_SECRET,
+  cloud_name: 'dtxszm4xo',
+  api_key: '842167945335214',
+  api_secret: 'b4mcpPJmnrRMX92r5ZmZaEF5ivU',
 });
 
 export const uploadImageToCloudinary = async (file) => {
